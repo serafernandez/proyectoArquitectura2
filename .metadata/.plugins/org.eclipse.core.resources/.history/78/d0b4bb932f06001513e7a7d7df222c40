@@ -1,0 +1,38 @@
+#include "msp430f2274.h"
+#include "TI_MSP_UART.h"
+#include "TI_MSP_ADC10.h"
+#include <stdio.h>
+#include <string.h>
+
+char dato_rx;
+unsigned int AD_result;
+char tx_buffer[10];
+
+void main( void )
+{
+  // Stop watchdog timer to prevent time out reset
+  WDTCTL = WDTPW + WDTHOLD;
+
+  /* configure internal digitally control led oscillator */
+  BCSCTL1 = CALBC1_1MHZ;
+  DCOCTL  = CALDCO_1MHZ;
+
+  Init_UART();                                // Inicialize USCIA (UART Mode)
+  Init_ADC10();
+
+  ADC10AE0 |= BIT4;
+
+  //__enable_interrupt();
+
+
+
+  while(1){
+
+    AD_result = AD10_Convert(INCH_4);
+    int resultado = (AD_result/1023) * 330;
+    sprintf(tx_buffer,"Lectura: %d --- %d\r\n", AD_result, resultado);
+    UART_Tx_string(tx_buffer, 0);
+
+
+  }
+}

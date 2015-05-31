@@ -1,0 +1,92 @@
+
+**** Build of configuration Debug for project Ejercicio3 ****
+
+/home/serafin/ti/ccsv6/utils/bin/gmake -k all 
+Building target: Ejercicio3.out
+Invoking: MSP430 Linker
+"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.4/bin/cl430" -vmsp --abi=eabi --use_hw_mpy=none --advice:power=all -g --define=__MSP430F2274__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"Ejercicio3.map" --heap_size=80 --stack_size=80 -i"/home/serafin/ti/ccsv6/ccs_base/msp430/include" -i"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.4/lib" -i"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Ejercicio3_linkInfo.xml" --use_hw_mpy=none --rom_model -o "Ejercicio3.out" "./TI_MSP_ADC10.obj" "./TI_MSP_UART.obj" "./main.obj" "../lnk_msp430f2274.cmd"  -l"libc.a" 
+<Linking>
+"/tmp/079632CQ54o", line 27: error #10008-D: cannot find file "./TI_MSP_UART.obj"
+
+ undefined      first referenced
+  symbol            in file     
+ ---------      ----------------
+ Init_UART      ./main.obj      
+ UART_Tx_string ./main.obj      
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Ejercicio3.out" not built
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+gmake: *** [Ejercicio3.out] Error 1
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+gmake: Target `all' not remade because of errors.
+
+>> Compilation failure
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Ejercicio1 ****
+
+/home/serafin/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmsp --abi=eabi --use_hw_mpy=none --include_path="/home/serafin/ti/ccsv6/ccs_base/msp430/include" --include_path="/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" --advice:power=all -g --define=__MSP430F2274__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+Finished building: ../main.c
+ 
+Building target: Ejercicio1.out
+Invoking: MSP430 Linker
+"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmsp --abi=eabi --use_hw_mpy=none --advice:power=all -g --define=__MSP430F2274__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"Ejercicio1.map" --heap_size=80 --stack_size=80 -i"/home/serafin/ti/ccsv6/ccs_base/msp430/include" -i"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/lib" -i"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Ejercicio1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "Ejercicio1.out" "./main.obj" "../lnk_msp430f2274.cmd"  -l"libc.a" 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Ejercicio1.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Ejercicio1ConInterrupciones ****
+
+/home/serafin/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Ejercicio2 ****
+
+/home/serafin/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Ejercicio3 ****
+
+/home/serafin/ti/ccsv6/utils/bin/gmake -k all 
+Building target: Ejercicio3.out
+Invoking: MSP430 Linker
+"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.4/bin/cl430" -vmsp --abi=eabi --use_hw_mpy=none --advice:power=all -g --define=__MSP430F2274__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"Ejercicio3.map" --heap_size=80 --stack_size=80 -i"/home/serafin/ti/ccsv6/ccs_base/msp430/include" -i"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.4/lib" -i"/home/serafin/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.4/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Ejercicio3_linkInfo.xml" --use_hw_mpy=none --rom_model -o "Ejercicio3.out" "./TI_MSP_ADC10.obj" "./TI_MSP_UART.obj" "./main.obj" "../lnk_msp430f2274.cmd"  -l"libc.a" 
+<Linking>
+"/tmp/08058xtCiDO", line 27: error #10008-D: cannot find file "./TI_MSP_UART.obj"
+
+ undefined      first referenced
+  symbol            in file     
+ ---------      ----------------
+ Init_UART      ./main.obj      
+ UART_Tx_string ./main.obj      
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Ejercicio3.out" not built
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+gmake: *** [Ejercicio3.out] Error 1
+
+>> Compilation failure
+gmake: Target `all' not remade because of errors.
+
+**** Build Finished ****

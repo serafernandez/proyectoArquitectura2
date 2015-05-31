@@ -1,0 +1,1 @@
+"./TI_MSP_ADC10.obj" "./TI_MSP_UART.obj" "./main.obj" "../lnk_msp430f2274.cmd" -l"libc.a" 
