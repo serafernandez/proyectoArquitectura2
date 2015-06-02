@@ -6,30 +6,12 @@
 #define LED2 BIT6	//P4.6
 
 
-void prendoLed1(){
-	P4OUT |= LED1;
-}
-void prendoLed2(){
-	P4OUT |= LED2;
-}
-
-void apagoLed1(){
-	P4OUT &= ~LED1;
-}
-void apagoLed2(){
-	P4OUT &= ~LED2;
-}
-
-
-void prendoTodosLosLeds(){
-	prendoLed1();
-	prendoLed2();
-}
-void apagoTodosLosLeds(){
-	apagoLed1();
-	apagoLed2();
-}
-
+void prendoLed1();
+void prendoLed2();
+void apagoLed1();
+void apagoLed2();
+void prendoTodosLosLeds();
+void apagoTodosLosLeds();
 
 void main(void) {
 
@@ -78,4 +60,28 @@ void main(void) {
 }
 
 
+
+void prendoLed1(){
+	P4OUT |= LED1;
+}
+void prendoLed2(){
+	P4OUT |= LED2;
+}
+
+void apagoLed1(){
+	P4OUT &= ~LED1;
+}
+void apagoLed2(){
+	P4OUT &= ~LED2;
+}
+
+
+void prendoTodosLosLeds(){
+	prendoLed1();
+	prendoLed2();
+}
+void apagoTodosLosLeds(){
+	apagoLed1();
+	apagoLed2();
+}
 
