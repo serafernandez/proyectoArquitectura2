@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 #define LED1 BIT5	//P4.5
-#define offset  2500
+#define OFFSET 2500
 
 long AD_result;
 
@@ -28,7 +28,7 @@ void main(void) {
 
 	// Configuracion Inicial Timer A
 	TACTL = (TASSEL_2 + ID_3 + MC_2);
-	TACCR1 = TAR + 12500;
+	TACCR1 = TAR + OFFSET;
 	TACCTL1 = (CM_0 + CCIS_2 + CCIE);
 
 	__enable_interrupt();
@@ -36,7 +36,7 @@ void main(void) {
 	while (1) {
 		AD_result = AD10_Convert(INCH_4);
 		porcentaje = ((AD_result * 80) / 1023) + 10;
-		tiempo = (porcentaje * offset) / 100;
+		tiempo = (porcentaje * OFFSET) / 100;
 	}
 }
 
@@ -57,7 +57,7 @@ __interrupt void TimerA_ISR_CCR1(void) {
 			ledPrendido = 1;
 			tiempoCero = tiempo;
 		}else{
-			TACCR1 += offset - tiempoCero;   // 12500 = 100mseg.
+			TACCR1 += OFFSET - tiempoCero;   // 12500 = 100mseg.
 			P4OUT &= ~LED1;
 			ledPrendido = 0;
 		}
