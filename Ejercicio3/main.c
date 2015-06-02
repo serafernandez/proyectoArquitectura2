@@ -12,6 +12,7 @@ unsigned int AD_result;
 char tx_buffer[20];
 
 void mostrarLecturaConvertida();
+void parsearResultado(int res, int* array);
 
 void main( void )
 {
@@ -39,14 +40,29 @@ void main( void )
 __interrupt void ISR_UartRx(void){
     if(UART_IFG & UART_UCAxRXIFG){
     	datoLeido = UART_UCAxRXBUF;
-	    if(datoLeido == 13)
+	    if(datoLeido == 67 || datoLeido == 99)
 		    mostrarLecturaConvertida();
     }
 }
 
 void mostrarLecturaConvertida(){
 	AD_result = AD10_Convert(INCH_4);
-	float resultado = ((float)AD_result/1023) * 3.3;
-	sprintf(tx_buffer,"%3.2fV", AD_result, resultado);
+	int resultado = ((float)AD_result/1023) * 330;
+
+	int resultadoArray[3];
+	parsearResultado(resultado, resultadoArray);
+
+	sprintf(tx_buffer,"%d.%d%dV\n\r", resultadoArray[0], resultadoArray[1], resultadoArray[2]);
 	UART_Tx_string(tx_buffer, 0);
 }
+
+void parsearResultado(int res, int* array){
+	array[0] = res / 100;
+	res -= (array[0] * 100);
+	array[1] = res / 10;
+	res -= (array[1] * 10);
+	array[2] = res;
+}
+
+
+
