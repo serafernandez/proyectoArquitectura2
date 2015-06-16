@@ -70,7 +70,7 @@ void realizarOperacion(int n1, char operacion, int n2){
 			break;
 	}
 
-	sprintf(debug, "%d\n", resultado);
+	sprintf(debug, "%d\n\r", resultado);
 	debugger(debug);
 
 }

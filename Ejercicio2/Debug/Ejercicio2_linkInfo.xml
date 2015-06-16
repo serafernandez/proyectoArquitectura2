@@ -2,7 +2,7 @@
 <link_info>
    <banner>MSP430 Linker Unix v4.4.4</banner>
    <copyright>Copyright (c) 2003-2015 Texas Instruments Incorporated</copyright>
-   <link_time>0x5568b932</link_time>
+   <link_time>0x556dafca</link_time>
    <link_errors>0x0</link_errors>
    <output_file>Ejercicio2.out</output_file>
    <entry_point>
@@ -492,20 +492,20 @@
       </object_component>
       <object_component id="oc-24f">
          <name>.cinit..bss.load</name>
-         <load_address>0x8676</load_address>
-         <run_address>0x8676</run_address>
+         <load_address>0x8678</load_address>
+         <run_address>0x8678</run_address>
          <size>0x4</size>
       </object_component>
       <object_component id="oc-24d">
          <name>__TI_handler_table</name>
-         <load_address>0x867a</load_address>
-         <run_address>0x867a</run_address>
+         <load_address>0x867c</load_address>
+         <run_address>0x867c</run_address>
          <size>0x2</size>
       </object_component>
       <object_component id="oc-24e">
          <name>__TI_cinit_table</name>
-         <load_address>0x867c</load_address>
-         <run_address>0x867c</run_address>
+         <load_address>0x867e</load_address>
+         <run_address>0x867e</run_address>
          <size>0x4</size>
       </object_component>
       <object_component id="oc-1d7">
@@ -519,7 +519,7 @@
          <name>.const:.string</name>
          <load_address>0x866e</load_address>
          <run_address>0x866e</run_address>
-         <size>0x8</size>
+         <size>0xa</size>
          <input_file_ref idref="fl-3"/>
       </object_component>
       <object_component id="oc-3b">
@@ -2573,8 +2573,8 @@
       </logical_group>
       <logical_group id="lg-8" display="no" color="cyan">
          <name>.cinit</name>
-         <load_address>0x8676</load_address>
-         <run_address>0x8676</run_address>
+         <load_address>0x8678</load_address>
+         <run_address>0x8678</run_address>
          <size>0xa</size>
          <contents>
             <object_component_ref idref="oc-24f"/>
@@ -2586,7 +2586,7 @@
          <name>.const</name>
          <load_address>0x865a</load_address>
          <run_address>0x865a</run_address>
-         <size>0x1c</size>
+         <size>0x1e</size>
          <contents>
             <object_component_ref idref="oc-1d7"/>
             <object_component_ref idref="oc-13f"/>
@@ -3170,7 +3170,7 @@
          <name>SEGMENT_2</name>
          <load_address>0x8000</load_address>
          <run_address>0x8000</run_address>
-         <size>0x680</size>
+         <size>0x682</size>
          <flags>0x5</flags>
          <contents>
             <logical_group_ref idref="lg-7"/>
@@ -3326,8 +3326,8 @@
          <page_id>0x0</page_id>
          <origin>0x8000</origin>
          <length>0x7fde</length>
-         <used_space>0x680</used_space>
-         <unused_space>0x795e</unused_space>
+         <used_space>0x682</used_space>
+         <unused_space>0x795c</unused_space>
          <attributes>RWIX</attributes>
          <usage_details>
             <allocated_space>
@@ -3337,17 +3337,17 @@
             </allocated_space>
             <allocated_space>
                <start_address>0x865a</start_address>
-               <size>0x1c</size>
+               <size>0x1e</size>
                <logical_group_ref idref="lg-9"/>
             </allocated_space>
             <allocated_space>
-               <start_address>0x8676</start_address>
+               <start_address>0x8678</start_address>
                <size>0xa</size>
                <logical_group_ref idref="lg-8"/>
             </allocated_space>
             <available_space>
-               <start_address>0x8680</start_address>
-               <size>0x795e</size>
+               <start_address>0x8682</start_address>
+               <size>0x795c</size>
             </available_space>
          </usage_details>
       </memory_area>
@@ -3593,7 +3593,7 @@
          <name>__TI_cinit_table</name>
          <cprec>
             <name>.bss</name>
-            <load_address>0x8676</load_address>
+            <load_address>0x8678</load_address>
             <load_size>0x4</load_size>
             <run_address>0x200</run_address>
             <run_size>0x1f</run_size>
@@ -3999,19 +3999,19 @@
       </symbol>
       <symbol id="sm-62">
          <name>__TI_CINIT_Base</name>
-         <value>0x867c</value>
+         <value>0x867e</value>
       </symbol>
       <symbol id="sm-63">
          <name>__TI_CINIT_Limit</name>
-         <value>0x8680</value>
+         <value>0x8682</value>
       </symbol>
       <symbol id="sm-64">
          <name>__TI_Handler_Table_Base</name>
-         <value>0x867a</value>
+         <value>0x867c</value>
       </symbol>
       <symbol id="sm-65">
          <name>__TI_Handler_Table_Limit</name>
-         <value>0x867c</value>
+         <value>0x867e</value>
       </symbol>
       <symbol id="sm-66">
          <name>binit</name>

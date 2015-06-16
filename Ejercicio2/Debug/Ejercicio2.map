@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v4.4.4                    
 ******************************************************************************
->> Linked Fri May 29 16:08:34 2015
+>> Linked Tue Jun  2 10:29:46 2015
 
 OUTPUT FILE NAME:   <Ejercicio2.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00008524
@@ -19,7 +19,7 @@ MEMORY CONFIGURATION
   INFOC                 00001040   00000040  00000000  00000040  RWIX
   INFOB                 00001080   00000040  00000000  00000040  RWIX
   INFOA                 000010c0   00000040  00000000  00000040  RWIX
-  FLASH                 00008000   00007fde  00000680  0000795e  RWIX
+  FLASH                 00008000   00007fde  00000682  0000795c  RWIX
   INT00                 0000ffe0   00000002  00000000  00000002  RWIX
   INT01                 0000ffe2   00000002  00000000  00000002  RWIX
   INT02                 0000ffe4   00000002  00000002  00000000  RWIX
@@ -88,14 +88,14 @@ section   page    origin      length       input sections
                   00008652    00000004                     : pre_init.obj (.text:_system_pre_init)
                   00008656    00000004                     : exit.obj (.text:abort)
 
-.const     0    0000865a    0000001c     
+.const     0    0000865a    0000001e     
                   0000865a    00000014     rts430_eabi.lib : _printfi_min.obj (.const:.string)
-                  0000866e    00000008     main.obj (.const:.string)
+                  0000866e    0000000a     main.obj (.const:.string)
 
-.cinit     0    00008676    0000000a     
-                  00008676    00000004     (.cinit..bss.load) [load image, compression = zero_init]
-                  0000867a    00000002     (__TI_handler_table)
-                  0000867c    00000004     (__TI_cinit_table)
+.cinit     0    00008678    0000000a     
+                  00008678    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000867c    00000002     (__TI_handler_table)
+                  0000867e    00000004     (__TI_cinit_table)
 
 .init_array 
 *          0    00008000    00000000     UNINITIALIZED
@@ -141,13 +141,13 @@ NMI        0    0000fffc    00000002
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 0000867c records: 1, size/record: 4, table size: 4
-	.bss: load addr=00008676, load size=00000004 bytes, run addr=00000200, run size=0000001f bytes, compression=zero_init
+__TI_cinit_table @ 0000867e records: 1, size/record: 4, table size: 4
+	.bss: load addr=00008678, load size=00000004 bytes, run addr=00000200, run size=0000001f bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 0000867a records: 1, size/record: 2, table size: 2
+__TI_handler_table @ 0000867c records: 1, size/record: 2, table size: 2
 	index: 0, handler: __TI_zero_init
 
 
@@ -259,10 +259,10 @@ address   name
 00000120  WDTCTL                  
 00000600  __STACK_END             
 00000050  __STACK_SIZE            
-0000867c  __TI_CINIT_Base         
-00008680  __TI_CINIT_Limit        
-0000867a  __TI_Handler_Table_Base 
-0000867c  __TI_Handler_Table_Limit
+0000867e  __TI_CINIT_Base         
+00008682  __TI_CINIT_Limit        
+0000867c  __TI_Handler_Table_Base 
+0000867e  __TI_Handler_Table_Limit
 UNDEFED   __TI_INITARRAY_Base     
 UNDEFED   __TI_INITARRAY_Limit    
 0000864c  __TI_ISR_TRAP           
@@ -488,10 +488,10 @@ address   name
 00008652  _system_pre_init        
 00008656  C$$EXIT                 
 00008656  abort                   
-0000867a  __TI_Handler_Table_Base 
-0000867c  __TI_CINIT_Base         
-0000867c  __TI_Handler_Table_Limit
-00008680  __TI_CINIT_Limit        
+0000867c  __TI_Handler_Table_Base 
+0000867e  __TI_CINIT_Base         
+0000867e  __TI_Handler_Table_Limit
+00008682  __TI_CINIT_Limit        
 0000ffe4  __TI_int02              
 0000ffe6  __TI_int03              
 0000ffea  __TI_int05              

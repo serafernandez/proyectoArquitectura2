@@ -52,14 +52,14 @@ __interrupt void TimerA_ISR_CCR1(void) {
 
 		// FunciSPon de Interrupcion cada 100mseg.
 		if(ledPrendido == 0){
-			TACCR1 += tiempoCero;   // 12500 = 100mseg.
 			P4OUT |= LED1;
 			ledPrendido = 1;
 			tiempoCero = tiempo;
+			TACCR1 += tiempoCero;   // 12500 = 100mseg.
 		}else{
-			TACCR1 += OFFSET - tiempoCero;   // 12500 = 100mseg.
 			P4OUT &= ~LED1;
 			ledPrendido = 0;
+			TACCR1 += OFFSET - tiempoCero;   // 12500 = 100mseg.
 		}
 	}
 }
